@@ -1,0 +1,42 @@
+<center>
+	<body class="backgrounnd"><h2 style= color:lightgreen><%=p2_name%> Start guessing the letters. </h2></center>
+<center><h3 style= color:lightgreen><%=blank%></h3></center>
+<br/><br/> 
+<form method="post" action="guess">
+
+<center>
+	<h2>incorrect guesses left</h2> <%=counter%>
+	<h2 class="messages"><%=message%></h2>
+	<h2 class="messages2"><%=message2%></h2>
+<input type="text" name="letter">
+<input type="hidden" name="player1" value="<%=p1_name%>">
+<input type="hidden" name="player2" value="<%=p2_name%>">
+<input type="submit" value="Enter Guess"/>
+<h2 style= color:lightgreen>Guesses-<%=array%> </h2>
+</center>
+</form>
+<center>
+<%if counter == 7 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png">
+<%end%>
+<%if counter == 6 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Hangman-1.png">
+<%end%>
+<%if counter == 5 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Hangman-2.png">
+<%end%>
+<%if counter == 4 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Hangman-3.png">
+<%end%>
+<%if counter == 3 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Hangman-4.png">
+<%end%>
+<%if counter == 2 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Hangman-5.png">
+<%end%>
+<%if counter == 1 %>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Hangman-6.png">
+<%end%>
+
+
+
